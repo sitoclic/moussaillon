@@ -177,6 +177,156 @@ export const ix = {
           : "À grande vitesse, le foil porte une grande partie du poids : la coque effleure l'eau. Un IMOCA ne vole jamais complètement, mais il s'allège énormément.",
     note: "Illustration simplifiée : les proportions sont exagérées pour bien voir l'effet.",
   },
+  silhouettes: {
+    title: "Toute la famille, à la même échelle",
+    intro: "Choisis une classe pour la mettre en avant. Le petit personnage mesure 1,80 m.",
+    aria: (name: string, length: string, mast: string) =>
+      `Silhouettes des bateaux de course à l'échelle. ${name} : longueur ${length}, mât ${mast}.`,
+    length: "Longueur",
+    mast: "Hauteur de mât",
+    hulls: "Coques",
+    mono: "1 (monocoque)",
+    tri: "3 (trimaran)",
+    note: "Dessins simplifiés, à l'échelle approximative.",
+  },
+  comparateur: {
+    title: "Le comparateur de classes",
+    intro: "Choisis deux bateaux et compare-les point par point.",
+    first: "Premier bateau",
+    second: "Second bateau",
+    mono: "1 (monocoque)",
+    tri: "3 (trimaran)",
+    footprint: "Vus de dessus, à la même échelle : la largeur d'un trimaran saute aux yeux.",
+    footprintAria: (a: string, b: string) => `${a} et ${b} vus de dessus, à la même échelle.`,
+    rows: {
+      length: "Longueur",
+      beam: "Largeur",
+      mast: "Hauteur de mât",
+      hulls: "Coques",
+      speed: "Vitesse de pointe (ordre de grandeur)",
+      price: "Prix (ordre de grandeur)",
+      crew: "À bord",
+      foils: "Foils",
+      races: "Courses phares",
+      pitch: "En une phrase",
+    },
+    note: "Dimensions : maxima fixés par les règles de chaque classe. Vitesses et prix : ordres de grandeur, très variables d'un bateau à l'autre.",
+  },
+  beaufort: {
+    title: "L'échelle de Beaufort vivante",
+    intro: "Fais glisser le curseur de 0 à 12 et regarde la mer changer.",
+    force: "Force",
+    wind: "Vent",
+    waves: "Vagues",
+    knots: "nœuds",
+    kmh: "km/h",
+    sea: "État de la mer",
+    skipper: "Pour un skipper",
+    sound: "Son",
+    soundOn: "Couper le son",
+    soundOff: "Activer le son (généré, sans fichier)",
+    slider: "Force du vent sur l'échelle de Beaufort",
+  },
+  meteoCarte: {
+    title: "Lire une carte météo",
+    intro: "Touche les éléments de la carte pour comprendre ce qu'ils signifient.",
+    items: {
+      high: {
+        label: "A : l'anticyclone",
+        text: "Une zone de hautes pressions. Au centre, peu de vent : les marins l'évitent. Dans l'hémisphère Nord, le vent tourne autour dans le sens des aiguilles d'une montre.",
+      },
+      low: {
+        label: "D : la dépression",
+        text: "Une zone de basses pressions. Le vent y tourne dans l'autre sens et y souffle fort, avec nuages et pluie. Bien placé, on y trouve un vent puissant pour aller vite ; mal placé, c'est la tempête.",
+      },
+      isobars: {
+        label: "Les isobares",
+        text: "Ces lignes relient les points de même pression, comme les courbes de niveau sur une carte de randonnée. Plus elles sont serrées, plus le vent est fort.",
+      },
+      arrows: {
+        label: "Les flèches de vent",
+        text: "Elles montrent la direction du vent. Le vent suit à peu près les isobares, en penchant légèrement vers les basses pressions.",
+      },
+      front: {
+        label: "Le front",
+        text: "La limite entre de l'air chaud et de l'air froid. Son passage apporte souvent pluie, grains et une bascule brutale du vent.",
+      },
+    },
+    pick: "Touche un élément de la carte.",
+  },
+  routage: {
+    title: "Le mini-jeu du routeur",
+    intro: "Deux routes possibles pour rejoindre l'arrivée. Laquelle choisirais-tu ?",
+    scenario: "Situation",
+    routeA: "Route 1",
+    routeB: "Route 2",
+    choose: "Je choisis",
+    distance: "Distance",
+    time: "Temps",
+    hours: (h: number) => `${Math.round(h)} h`,
+    miles: (m: number) => `${m} milles`,
+    youWin: "Bien vu, ta route gagne !",
+    youLose: "Raté : l'autre route arrive avant.",
+    again: "Situation suivante",
+    restart: "Rejouer",
+    start: "Départ",
+    finish: "Arrivée",
+    scenarios: [
+      {
+        name: "Un anticyclone sur la route",
+        a: "La route directe, en plein milieu de l'anticyclone.",
+        b: "Le détour par le bord de l'anticyclone, là où le vent souffle.",
+        lesson:
+          "Au centre d'un anticyclone, il n'y a presque pas de vent : la route courte devient interminable. Le détour est plus long, mais bien plus rapide.",
+      },
+      {
+        name: "Une dépression au sud de la route",
+        a: "La route directe, au nord de la dépression : le vent arrive de face.",
+        b: "Le grand crochet par le sud de la dépression, avec le vent dans le dos.",
+        lesson:
+          "Au près, on remonte le vent en zigzag et l'on va moins vite. Au portant, le bateau file : la route plus longue l'emporte.",
+      },
+      {
+        name: "Des alizés bien établis",
+        a: "La route directe, vent de travers.",
+        b: "Un détour vers le sud pour chercher plus de vent.",
+        lesson:
+          "Quand le vent est régulier partout, le détour ne rapporte rien : la route directe gagne. Le routage, c'est savoir quand faire un détour… et quand ne pas en faire !",
+      },
+    ],
+  },
+  coordonnees: {
+    title: "Latitude et longitude",
+    intro: "Touche la carte : tu obtiens la position du point. Sauras-tu trouver la mission ?",
+    lat: "Latitude",
+    lon: "Longitude",
+    north: "N",
+    south: "S",
+    east: "E",
+    west: "O",
+    missions: [
+      { label: "Trouve l'équateur et le méridien de Greenwich (0°, 0°)", lat: 0, lon: 0 },
+      { label: "Trouve le cap Horn (56° S, 67° O)", lat: -56, lon: -67 },
+      { label: "Trouve le point Nemo (49° S, 123° O)", lat: -49, lon: -123 },
+    ],
+    found: "Trouvé ! Bravo, navigateur.",
+    close: (d: number) => `Encore un effort : tu es à environ ${d} milles nautiques.`,
+    next: "Mission suivante",
+    equator: "Équateur",
+    greenwich: "Greenwich",
+  },
+  capRoute: {
+    title: "Le cap et la route",
+    intro:
+      "Ajoute du courant : le bateau pointe toujours dans la même direction, mais il ne va plus au même endroit.",
+    current: "Force du courant (vers le sud)",
+    heading: "Cap",
+    track: "Route réelle",
+    drift: (deg: number) =>
+      deg === 0
+        ? "Pas de courant : la route suit le cap."
+        : `Le courant dévie le bateau de ${deg}° par rapport à son cap.`,
+  },
 } as const;
 
 export type IX = typeof ix;

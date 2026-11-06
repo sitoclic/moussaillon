@@ -140,6 +140,62 @@ export const chiffres = {
     statut: "a-verifier",
   },
 
+  miniDimensions: {
+    libelle: "Mini 6.50 : longueur et largeur maximales",
+    valeur: "6,50 m de long, 3 m de large",
+    source: { nom: "Classe Mini – textes officiels 2026", url: "https://www.classemini.com" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  figaro3Dimensions: {
+    libelle: "Figaro Beneteau 3 : dimensions",
+    valeur: "10,85 m hors tout, 9,75 m de coque, 3,40 m de large, 2 900 kg",
+    source: { nom: "Classe Figaro Beneteau – fiche technique", url: "https://www.classefigarobeneteau.fr" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  class40Dimensions: {
+    libelle: "Class40 : dimensions maximales",
+    valeur: "12,19 m de long, 4,50 m de large, 3 m de tirant d'eau, 19 m de tirant d'air",
+    source: { nom: "Class40 – règles de classe 2026", url: "https://www.class40.com" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  oceanFiftyDimensions: {
+    libelle: "Ocean Fifty : dimensions",
+    valeur: "15,24 m de long et autant de large",
+    source: { nom: "Mers et Bateaux, VPLP (classe Ocean Fifty)" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  ultimDimensions: {
+    libelle: "Ultim : dimensions maximales",
+    valeur: "32 m de long, 23 m de large",
+    source: { nom: "Classe Ultim 32/23", url: "https://www.ultim3223.com" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  record24hEquipageAbsolu: {
+    libelle: "Record de distance à la voile en 24 h (équipage)",
+    valeur: "908 milles (37,8 nœuds de moyenne) – Banque Populaire V, 2009",
+    source: { nom: "World Sailing, Yachting Monthly" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  record24hSoloAbsolu: {
+    libelle: "Record de distance à la voile en 24 h (solitaire)",
+    valeur: "850,68 milles – François Gabart (trimaran Macif), 2017",
+    source: { nom: "World Sailing Speed Record Council, Yachting World" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  beaufort: {
+    libelle: "Échelle de Beaufort (vent et vagues)",
+    valeur: "Force 0 (moins de 1 nœud) à force 12 (64 nœuds et plus)",
+    source: { nom: "Organisation météorologique mondiale, Météo-France", url: "https://meteofrance.com" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
   // ——— Records ———
   recordVendeeGlobe: {
     libelle: "Record du Vendée Globe",

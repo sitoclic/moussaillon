@@ -712,6 +712,25 @@ export const glossary: GlossaryEntry[] = [
     definition: "Le règlement technique d'une classe : dimensions, poids, matériaux autorisés…",
   },
 
+  {
+    id: "monotype",
+    term: "Monotype",
+    theme: "course",
+    definition:
+      "Une classe où tous les bateaux sont identiques, construits dans le même moule. Seul le talent du marin fait la différence.",
+  },
+  {
+    id: "prototype",
+    term: "Prototype",
+    theme: "course",
+    definition: "Un bateau unique, dessiné sur mesure dans le cadre des règles de sa classe.",
+  },
+  {
+    id: "petole",
+    term: "Pétole",
+    theme: "mer-meteo",
+    definition: "L'absence totale de vent. Le cauchemar des marins de course.",
+  },
   // ——— La vie à bord ———
   {
     id: "quart",
