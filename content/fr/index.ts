@@ -7,6 +7,7 @@ export { ui } from "./ui";
 export { chapters, getChapter } from "./chapters";
 export { glossary, findTerm } from "./glossary";
 export { quizzes } from "./quiz";
+export { imocaParts } from "./imoca";
 
 /**
  * Texte de chaque chapitre (MDX), chargé uniquement à la demande.
@@ -14,4 +15,6 @@ export { quizzes } from "./quiz";
  */
 export const chapterBodies: Record<string, () => Promise<{ default: MDXContent }>> = {
   "the-dock": () => import("./chapters/the-dock.mdx"),
+  "how-sailing-works": () => import("./chapters/how-sailing-works.mdx"),
+  "imoca-anatomy": () => import("./chapters/imoca-anatomy.mdx"),
 };

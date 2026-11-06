@@ -69,6 +69,77 @@ export const chiffres = {
     statut: "verifie",
   },
 
+  imocaLargeur: {
+    libelle: "Largeur maximale de la coque d'un IMOCA",
+    valeur: "5,85 m",
+    nombre: 5.85,
+    source: { nom: "Classe IMOCA – règles de jauge", url: "https://www.imoca.org/en/imoca/jauge-imoca" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  imocaTirantAir: {
+    libelle: "Tirant d'air maximal d'un IMOCA (hauteur du mât au-dessus de l'eau)",
+    valeur: "29 m (bateau au repos, sans gîte)",
+    nombre: 29,
+    source: { nom: "Classe IMOCA – règles de jauge", url: "https://www.imoca.org/en/imoca/jauge-imoca" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  imocaTirantEau: {
+    libelle: "Tirant d'eau maximal d'un IMOCA",
+    valeur: "4,50 m",
+    nombre: 4.5,
+    source: { nom: "Classe IMOCA – règles de jauge", url: "https://www.imoca.org/en/imoca/jauge-imoca" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  imocaLongueurHorsTout: {
+    libelle: "Longueur hors tout maximale d'un IMOCA (avec le bout-dehors)",
+    valeur: "20,12 m",
+    nombre: 20.12,
+    source: { nom: "Classe IMOCA – règles de jauge", url: "https://www.imoca.org/en/imoca/jauge-imoca" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  imocaBulbe: {
+    libelle: "Masse du bulbe de quille d'un IMOCA",
+    valeur: "entre 2,2 et 2,85 tonnes",
+    source: { nom: "Classe IMOCA – règles de jauge", url: "https://www.imoca.org/en/imoca/jauge-imoca" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  // À VÉRIFIER : ordres de grandeur cités par la presse, pas de valeur officielle
+  imocaVoilure: {
+    libelle: "Surface de voilure d'un IMOCA moderne",
+    valeur: "environ 260 m² au près et jusqu'à 600 m² au portant",
+    source: { nom: "Presse spécialisée (ordre de grandeur, variable selon les bateaux)" },
+    verifieLe: "2026-11-06",
+    statut: "a-verifier",
+  },
+  // À VÉRIFIER : estimation de presse
+  imocaDeplacement: {
+    libelle: "Poids d'un IMOCA de dernière génération",
+    valeur: "environ 8 tonnes",
+    source: { nom: "Presse spécialisée (estimation)" },
+    verifieLe: "2026-11-06",
+    statut: "a-verifier",
+  },
+  record24hEquipageMonocoque: {
+    libelle: "Record de distance en 24 h en monocoque (équipage)",
+    valeur: "641,13 milles (26,7 nœuds de moyenne) – Team Malizia, The Ocean Race, mai 2023",
+    source: { nom: "IMOCA, Giornale della Vela", url: "https://www.imoca.org" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  // À VÉRIFIER : record homologué par le WSSRC (Simon 615,33 milles, puis Lunven ?)
+  record24hSolo: {
+    libelle: "Record de distance en 24 h en monocoque, en solitaire",
+    valeur: "plus de 615 milles (Vendée Globe 2024-2025)",
+    source: { nom: "IMOCA, World Sailing Speed Record Council", url: "https://www.imoca.org" },
+    verifieLe: "2026-11-06",
+    statut: "a-verifier",
+  },
+
   // ——— Records ———
   recordVendeeGlobe: {
     libelle: "Record du Vendée Globe",

@@ -57,11 +57,11 @@ export const glossary: GlossaryEntry[] = [
       "La partie surélevée du pont qui abrite l'intérieur et protège le cockpit des paquets de mer.",
   },
   {
-    // À VÉRIFIER : hauteur exacte du mât IMOCA (voir A_VERIFIER.md)
     id: "mat",
     term: "Mât",
     theme: "bateau",
-    definition: "Le grand poteau vertical qui porte les voiles. Celui d'un IMOCA mesure environ 29 m.",
+    definition:
+      "Le grand poteau vertical qui porte les voiles. Celui d'un IMOCA culmine jusqu'à 29 m au-dessus de l'eau.",
   },
   {
     id: "mat-aile",
@@ -109,11 +109,11 @@ export const glossary: GlossaryEntry[] = [
     definition: "Un poids placé bas dans le bateau (souvent au bout de la quille) pour le stabiliser.",
   },
   {
-    // À VÉRIFIER : masse du bulbe IMOCA (voir A_VERIFIER.md)
     id: "bulbe",
     term: "Bulbe",
     theme: "bateau",
-    definition: "La « torpille » de plomb au bout de la quille. Sur un IMOCA, elle pèse environ 3 tonnes.",
+    definition:
+      "La « torpille » de plomb au bout de la quille. Sur un IMOCA, il pèse entre 2,2 et 2,85 tonnes.",
   },
   {
     id: "quille-pendulaire",

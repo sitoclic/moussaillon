@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 import { Terme } from "@/components/ui/Terme";
 import { Astuce, ATerre, Bulle } from "@/components/ui/Boxes";
-import { interactives } from "./interactives";
+import { getInteractives } from "./interactives";
 
 /**
  * Composants disponibles dans les fichiers MDX des chapitres.
@@ -22,6 +22,6 @@ export function getMdxComponents(lang: Locale) {
     Bulle: (p: React.ComponentProps<typeof Bulle>) => <Bulle {...p} lang={lang} />,
     ATerre: (p: { children: React.ReactNode }) => <ATerre lang={lang} {...p} />,
     Wide: ({ children }: { children: React.ReactNode }) => <div className="wide">{children}</div>,
-    ...interactives,
+    ...getInteractives(lang),
   };
 }

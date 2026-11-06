@@ -247,3 +247,46 @@ body {
     background: white;
   }
 }
+
+/* Voile qui fasèye (claque au vent). */
+@keyframes sail-flap {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(-0.6);
+  }
+  50% {
+    transform: scaleX(0.8);
+  }
+  75% {
+    transform: scaleX(-1);
+  }
+}
+.sail-flap > path:first-child {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: sail-flap 0.5s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sail-flap > path:first-child {
+    animation: none;
+    stroke-dasharray: 4 4;
+  }
+}
+
+/* Filets d'air qui s'écoulent autour d'une voile. */
+@keyframes flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+.flow-line {
+  animation: flow 1.2s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-line {
+    animation: none;
+  }
+}
