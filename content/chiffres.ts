@@ -232,6 +232,49 @@ export const chiffres = {
     statut: "verifie",
   },
 
+  arkeaUltimChallenge2024: {
+    libelle: "Arkéa Ultim Challenge – Brest 2024 : vainqueur",
+    valeur: "Charles Caudrelier, 50 j 19 h 7 min, arrivée le 27 février 2024",
+    source: { nom: "Sailing Scuttlebutt, Yachts & Yachting" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  oceanRace2027: {
+    libelle: "The Ocean Race 2027 : départ",
+    valeur: "Alicante, 17 janvier 2027, flotte d'IMOCA à foils",
+    source: { nom: "The Ocean Race", url: "https://www.theoceanrace.com/en/2027" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  transatCafeLOr2025: {
+    libelle: "Transat Café L'Or 2025 (ex-Transat Jacques Vabre)",
+    valeur: "Départ du Havre le 26 octobre 2025, arrivée à Fort-de-France ; nouveau nom depuis 2025",
+    source: { nom: "Figaro Nautisme, bateaux.com" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  miniTransat2025: {
+    libelle: "Mini Transat 2025",
+    valeur:
+      "Première étape annulée (ouragan Gabrielle), départ des Canaries le 25 octobre 2025, arrivée à Saint-François (Guadeloupe)",
+    source: { nom: "Figaro Nautisme, classe Mini" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  theTransat2024: {
+    libelle: "The Transat CIC 2024",
+    valeur: "Lorient → New York, départ le 28 avril 2024 ; course créée en 1960",
+    source: { nom: "The Transat, IMOCA", url: "https://thetransat.com/en/history" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
+  vendeeGlobeDistance: {
+    libelle: "Distance théorique du Vendée Globe",
+    valeur: "environ 24 000 milles (près de 45 000 km)",
+    source: { nom: "Vendée Globe", url: "https://www.vendeeglobe.org" },
+    verifieLe: "2026-11-06",
+    statut: "verifie",
+  },
   // ——— Actualité ———
   routeDuRhum2026: {
     libelle: "13e Route du Rhum – Destination Guadeloupe",

@@ -144,6 +144,10 @@ export const ui = {
     caption:
       "Le monocoque tient debout grâce à son lest. Le catamaran et le trimaran, eux, tirent leur stabilité de leur largeur : plus légers, donc plus rapides, mais incapables de se redresser s'ils chavirent.",
   },
+  news: {
+    title: "En ce moment",
+    updated: "Mis à jour le",
+  },
   term: {
     definition: "Définition",
     seeGlossary: "Voir dans le glossaire",

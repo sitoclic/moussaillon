@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import type { Locale } from "@/lib/i18n";
 import { getContent } from "@/content";
 import { TypesCoques } from "@/components/interactive/ch4/TypesCoques";
+import { EnCeMoment } from "@/components/ui/EnCeMoment";
 
 /**
  * Les grandes interactions, utilisables dans les chapitres MDX.
@@ -44,6 +45,20 @@ const JeuRoutage = dynamic(() => import("@/components/interactive/ch5/JeuRoutage
 const Coordonnees = dynamic(() =>
   import("@/components/interactive/ch6/Coordonnees").then((m) => m.Coordonnees),
 );
+// Chapitre 7
+const CarteVendeeGlobe = dynamic(() =>
+  import("@/components/interactive/ch7/CarteVendeeGlobe").then((m) => m.CarteVendeeGlobe),
+);
+// Chapitre 8
+const SimulateurSommeil = dynamic(() =>
+  import("@/components/interactive/ch8/SimulateurSommeil").then((m) => m.SimulateurSommeil),
+);
+const JourneeType = dynamic(() =>
+  import("@/components/interactive/ch8/JourneeType").then((m) => m.JourneeType),
+);
+// Chapitre 9
+const Courses = dynamic(() => import("@/components/interactive/ch9/Courses").then((m) => m.Courses));
+const Frise = dynamic(() => import("@/components/interactive/ch9/Frise").then((m) => m.Frise));
 const CapRoute = dynamic(() => import("@/components/interactive/ch6/CapRoute").then((m) => m.CapRoute));
 
 export function getInteractives(lang: Locale) {
@@ -67,5 +82,11 @@ export function getInteractives(lang: Locale) {
     JeuRoutage,
     Coordonnees,
     CapRoute,
+    CarteVendeeGlobe: () => <CarteVendeeGlobe steps={content.vgSteps} />,
+    SimulateurSommeil,
+    JourneeType: () => <JourneeType events={content.journeeType} />,
+    Courses: () => <Courses races={content.races} />,
+    Frise: () => <Frise events={content.frise} />,
+    EnCeMoment: () => <EnCeMoment lang={lang} />,
   };
 }

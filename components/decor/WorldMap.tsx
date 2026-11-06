@@ -7,6 +7,8 @@ import { LANDS, polyPath, WORLD_H, WORLD_W } from "@/lib/world";
  */
 export function WorldMap({
   center = 0,
+  lonMin,
+  lonMax,
   latTop = 90,
   latBottom = -90,
   className,
@@ -15,6 +17,9 @@ export function WorldMap({
   ...rest
 }: {
   center?: number;
+  /** Recadrage horizontal facultatif (en longitudes, sans décalage). */
+  lonMin?: number;
+  lonMax?: number;
   latTop?: number;
   latBottom?: number;
   className?: string;
@@ -23,7 +28,10 @@ export function WorldMap({
 } & React.SVGProps<SVGSVGElement>) {
   const y0 = (90 - latTop) * 2;
   const h = (latTop - latBottom) * 2;
-  const shift = -center * 2;
+  const crop = lonMin !== undefined && lonMax !== undefined;
+  const shift = crop ? 0 : -center * 2;
+  const x0 = crop ? (lonMin + 180) * 2 : 0;
+  const w = crop ? (lonMax - lonMin) * 2 : WORLD_W;
   const world = (
     <>
       {graticule && (
@@ -50,8 +58,8 @@ export function WorldMap({
     </>
   );
   return (
-    <svg viewBox={`0 ${y0} ${WORLD_W} ${h}`} className={className} {...rest}>
-      <rect x="0" y={y0} width={WORLD_W} height={h} fill="var(--ocean-2)" opacity="0.14" />
+    <svg viewBox={`${x0} ${y0} ${w} ${h}`} className={className} {...rest}>
+      <rect x={x0} y={y0} width={w} height={h} fill="var(--ocean-2)" opacity="0.14" />
       <g transform={`translate(${shift} 0)`}>
         {[-WORLD_W, 0, WORLD_W].map((dx) => (
           <g key={dx} transform={`translate(${dx} 0)`}>

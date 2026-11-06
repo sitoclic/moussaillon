@@ -731,6 +731,21 @@ export const glossary: GlossaryEntry[] = [
     theme: "mer-meteo",
     definition: "L'absence totale de vent. Le cauchemar des marins de course.",
   },
+  {
+    id: "quarantiemes",
+    term: "40e Rugissants et 50e Hurlants",
+    theme: "mer-meteo",
+    aliases: ["40e rugissants", "50e hurlants", "mers du sud"],
+    definition:
+      "Les latitudes au-delà de 40° et de 50° sud. Aucune terre n'y arrête le vent : tempêtes, houles énormes et froid y règnent.",
+  },
+  {
+    id: "cap-hornier",
+    term: "Cap-hornier",
+    theme: "course",
+    definition:
+      "Un marin qui a franchi le cap Horn à la voile. Un titre de gloire depuis l'époque des grands voiliers.",
+  },
   // ——— La vie à bord ———
   {
     id: "quart",

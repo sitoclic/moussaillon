@@ -4,6 +4,7 @@ import { getContent } from "@/content";
 import { Hero } from "@/components/home/Hero";
 import { VoyageMap } from "@/components/home/VoyageMap";
 import { Moussaillon } from "@/components/mascotte/Moussaillon";
+import { EnCeMoment } from "@/components/ui/EnCeMoment";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -31,6 +32,10 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-5 pt-16">
+        <EnCeMoment lang={lang} />
+      </div>
 
       <VoyageMap
         stops={chapters.map(({ slug, number, stop, title, teaser, minutes, place, coords }) => ({

@@ -128,7 +128,7 @@ body {
 .prose-moussaillon > * + * {
   margin-top: 1.1em;
 }
-.prose-moussaillon h2 {
+.prose-moussaillon > h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem);
   line-height: 1.15;
@@ -136,13 +136,14 @@ body {
   margin-top: 2.6em;
   letter-spacing: -0.01em;
 }
-.prose-moussaillon h3 {
+.prose-moussaillon > h3 {
   font-family: var(--font-serif);
   font-size: 1.35rem;
   font-weight: 600;
   margin-top: 2em;
 }
-.prose-moussaillon a {
+.prose-moussaillon > p a,
+.prose-moussaillon > ul a {
   color: var(--link);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -150,18 +151,18 @@ body {
 .prose-moussaillon strong {
   font-weight: 650;
 }
-.prose-moussaillon ul {
+.prose-moussaillon > ul {
   list-style: none;
   padding-left: 0;
 }
-.prose-moussaillon ul > li {
+.prose-moussaillon > ul > li {
   position: relative;
   padding-left: 1.6em;
 }
-.prose-moussaillon ul > li + li {
+.prose-moussaillon > ul > li + li {
   margin-top: 0.4em;
 }
-.prose-moussaillon ul > li::before {
+.prose-moussaillon > ul > li::before {
   content: "";
   position: absolute;
   left: 0.3em;
@@ -172,9 +173,12 @@ body {
   background: var(--accent);
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
 }
-.prose-moussaillon ol {
+.prose-moussaillon > ol {
   list-style: decimal;
   padding-left: 1.4em;
+}
+.prose-moussaillon > ol > li + li {
+  margin-top: 0.4em;
 }
 /* Les blocs « pleine largeur » (interactifs) peuvent déborder du texte. */
 .prose-moussaillon > .wide {
